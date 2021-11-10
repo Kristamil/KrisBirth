@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url(birth.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin:0;
+                overflow: hidden;
+            }
+            h1{
+                font-weight: bold;
+                font-size: 60px;
+                margin: -150px 0 40px;
+                color:white;
+                background:linear-gradient(45deg,black,gold);
+                border-radius: 10% 10% 10% 10%;
+            }
+            .Countdown
+            {
+                display: flex;
+                transform: scale(2);
+                color:gold;
+                background:linear-gradient(45deg,red,black);
+                border-radius: 10% 10% 10% 10%;
+                margin-top: 3%;
+
+            }
+            h2{
+                font-weight: bold;
+                color:maroon;
+                background: linear-gradient(45deg,pink,green);
+                border-radius: 10% 10% 10% 10%;
+                margin-top:20%;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>HAPPY BIRTHDAY Jiii</h1>
+        
+        <div id="Countdown" class="Countdown">
+           
+        </div>
+        <script>
+            var dest=new Date("Nov 11,2021 00:00:00").getTime();
+            var x=setInterval(function() {
+            var now=new Date().getTime();
+            var diff=dest-now;
+            var days=Math.floor (diff /(1000*60*60*24));
+            var hours=Math.floor((diff %(1000*60*60*24))/(1000*60*60));
+            var minutes=Math.floor((diff %(1000*60*60))/(1000*60));
+            var seconds=Math.floor((diff %(1000*60))/1000);
+            document.getElementById("Countdown").innerHTML=days+"d"+ hours+"hrs:"+minutes+"m:"+seconds+"s"
+            },1000);
+
+        </script>
+        <div>
+        <h2>Hope you had a nice Birthday jii!</h2>
+    </div>
+    </body>
+</html>
